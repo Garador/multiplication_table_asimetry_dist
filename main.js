@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mdl-grid\">\n\t<div class=\"mdl-cell mdl-cell--12-col header_title\">\n\t\t<h1>Chart Results</h1>\n\t</div>\n\t<div class=\"mdl-cell mdl-cell--4-col mdl-cell-12-col-phone\">\n\t\t<form class=\"formA\">\n\t\t\t<input name=\"multiplierFactorRange\" [(ngModel)]=\"multiplierFactor\" class=\"mdl-slider mdl-js-slider\" type=\"range\" min=\"0\"\n\t\t\t max=\"100\" value=\"2\" tabindex=\"0\">\n\n\t\t\t<div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n\t\t\t\t<input class=\"mdl-textfield__input\" name=\"multiplierFactor\" [(ngModel)]=\"multiplierFactor\" type=\"number\" pattern=\"-?[0-9]*(\\.[0-9]+)?\"\n\t\t\t\t id=\"sample4\">\n\t\t\t\t<label class=\"mdl-textfield__label\" for=\"sample4\">Multiplier</label>\n\t\t\t\t<span class=\"mdl-textfield__error\">Input is not a number!</span>\n\t\t\t</div>\n\n\t\t\t<input name=\"pointsAmmountRange\" [(ngModel)]=\"pointsAmmount\" class=\"mdl-slider mdl-js-slider\" type=\"range\" min=\"0\"\n\t\t\t max=\"100\" value=\"20\" tabindex=\"0\">\n\n\t\t\t<div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n\t\t\t\t<input class=\"mdl-textfield__input\" name=\"pointsAmmount\" [(ngModel)]=\"pointsAmmount\" type=\"number\" pattern=\"-?[0-9]*(\\.[0-9]+)?\"\n\t\t\t\t id=\"sample4\">\n\t\t\t\t<label class=\"mdl-textfield__label\" for=\"sample4\">Ammount of points</label>\n\t\t\t\t<span class=\"mdl-textfield__error\">Input is not a number!</span>\n\t\t\t</div>\n\t\t\t<br/>\n\t\t\t<button (click)=\"calculate()\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored\">\n\t\t\t\tGenerate\n\t\t\t</button>\n\t\t</form>\n\t\t<table \n\t\t*ngIf=\"false\"\n\t\tclass=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp results_table\">\n\t\t\t<thead>\n\t\t\t\t<tr>\n\t\t\t\t\t<th>From</th>\n\t\t\t\t\t<th>To</th>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\t\t\t\t<tr *ngFor=\"let item of drawResult.points; let i = index\">\n\t\t\t\t\t<td>{{item.pointA.label}}</td>\n\t\t\t\t\t<td>{{getReverseBLabel(i)}}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</div>\n\t<div class=\"mdl-cell mdl-cell--8-col mdl-cell-4-col-tablet\" id=\"graphContainer_a\">\n\t\t<app-svg-chart #mainSvgChart [multFactor]=\"multiplierFactor\" (generateEmitter)=\"drewChart($event)\"\n\t\t [canonicPointsAmmount]=\"pointsAmmount\"></app-svg-chart>\n\t</div>\n</div>"
+module.exports = "<div class=\"mdl-grid\">\n\t<div class=\"mdl-cell mdl-cell--12-col header_title\">\n\t\t<h1>Times-Table Graphics</h1>\n\t\t<hr/>\n\t</div>\n\t<div class=\"mdl-cell mdl-cell--8-col mdl-cell-4-col-tablet\" id=\"graphContainer_a\">\n\t\t<app-svg-chart #mainSvgChart [multFactor]=\"multiplierFactor\" (generateEmitter)=\"drewChart($event)\"\n\t\t [canonicPointsAmmount]=\"pointsAmmount\"></app-svg-chart>\n\t</div>\n\t<div class=\"mdl-cell mdl-cell--4-col mdl-cell-12-col-phone\">\n\t\t<form class=\"formA\">\n\t\t\t<input name=\"multiplierFactorRange\" [(ngModel)]=\"multiplierFactor\" class=\"mdl-slider mdl-js-slider\" type=\"range\" min=\"0\"\n\t\t\t max=\"100\" value=\"2\" tabindex=\"0\">\n\n\t\t\t<div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n\t\t\t\t<input class=\"mdl-textfield__input\" name=\"multiplierFactor\" [(ngModel)]=\"multiplierFactor\" type=\"number\" pattern=\"-?[0-9]*(\\.[0-9]+)?\"\n\t\t\t\t id=\"sample4\">\n\t\t\t\t<label class=\"mdl-textfield__label\" for=\"sample4\">Multiplier</label>\n\t\t\t\t<span class=\"mdl-textfield__error\">Input is not a number!</span>\n\t\t\t</div>\n\n\t\t\t<input name=\"pointsAmmountRange\" [(ngModel)]=\"pointsAmmount\" class=\"mdl-slider mdl-js-slider\" type=\"range\" min=\"0\"\n\t\t\t max=\"100\" value=\"20\" tabindex=\"0\">\n\n\t\t\t<div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n\t\t\t\t<input class=\"mdl-textfield__input\" name=\"pointsAmmount\" [(ngModel)]=\"pointsAmmount\" type=\"number\" pattern=\"-?[0-9]*(\\.[0-9]+)?\"\n\t\t\t\t id=\"sample4\">\n\t\t\t\t<label class=\"mdl-textfield__label\" for=\"sample4\">Ammount of points</label>\n\t\t\t\t<span class=\"mdl-textfield__error\">Input is not a number!</span>\n\t\t\t</div>\n\t\t</form>\n\t\t<table \n\t\t*ngIf=\"false\"\n\t\tclass=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp results_table\">\n\t\t\t<thead>\n\t\t\t\t<tr>\n\t\t\t\t\t<th>From</th>\n\t\t\t\t\t<th>To</th>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\t\t\t\t<tr *ngFor=\"let item of drawResult.points; let i = index\">\n\t\t\t\t\t<td>{{item.pointA.label}}</td>\n\t\t\t\t\t<td>{{getReverseBLabel(i)}}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"mdl-grid\">\n\t<div class=\"mdl-cell mdl-cell--12
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#graphContainer_a {\n  min-height: 350px !important; }\n\n.header_title {\n  text-align: center; }\n\n.formA {\n  text-align: center; }\n\n.formA .mdl-textfield {\n    width: 100%; }\n\n.results_table {\n  margin-top: 2em;\n  text-align: center;\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6b2xvdC9Eb2N1bWVudHMvV29yay9HaWdzL1JlZGRpdC9LVFhBQi9hcHAxL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0MsNEJBQTRCLEVBQUE7O0FBRzdCO0VBQ0Msa0JBQWlCLEVBQUE7O0FBR2xCO0VBQ0Msa0JBQWtCLEVBQUE7O0FBRG5CO0lBR0UsV0FBVSxFQUFBOztBQUlaO0VBQ0MsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixXQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjZ3JhcGhDb250YWluZXJfYSB7XG5cdG1pbi1oZWlnaHQ6IDM1MHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5oZWFkZXJfdGl0bGUge1xuXHR0ZXh0LWFsaWduOmNlbnRlcjtcbn1cblxuLmZvcm1BIHtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHQubWRsLXRleHRmaWVsZCB7XG5cdFx0d2lkdGg6MTAwJTtcblx0fVxufVxuXG4ucmVzdWx0c190YWJsZSB7XG5cdG1hcmdpbi10b3A6IDJlbTtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHR3aWR0aDogMTAwJTtcbn0iXX0= */"
+module.exports = "#graphContainer_a {\n  min-height: 350px !important; }\n\n.header_title {\n  text-align: left; }\n\n.formA {\n  text-align: center; }\n\n.formA .mdl-textfield {\n    width: 100%; }\n\n.results_table {\n  margin-top: 2em;\n  text-align: center;\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6b2xvdC9Eb2N1bWVudHMvV29yay9HaWdzL1JlZGRpdC9LVFhBQi9hcHAxL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0MsNEJBQTRCLEVBQUE7O0FBRzdCO0VBQ0MsZ0JBQWUsRUFBQTs7QUFHaEI7RUFDQyxrQkFBa0IsRUFBQTs7QUFEbkI7SUFHRSxXQUFVLEVBQUE7O0FBSVo7RUFDQyxlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNncmFwaENvbnRhaW5lcl9hIHtcblx0bWluLWhlaWdodDogMzUwcHggIWltcG9ydGFudDtcbn1cblxuLmhlYWRlcl90aXRsZSB7XG5cdHRleHQtYWxpZ246bGVmdDtcbn1cblxuLmZvcm1BIHtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHQubWRsLXRleHRmaWVsZCB7XG5cdFx0d2lkdGg6MTAwJTtcblx0fVxufVxuXG4ucmVzdWx0c190YWJsZSB7XG5cdG1hcmdpbi10b3A6IDJlbTtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHR3aWR0aDogMTAwJTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -65,11 +65,33 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app1';
-        this.multiplierFactor = 2;
-        this.pointsAmmount = 10;
+        this._multiplierFactor = 2;
+        this._pointsAmmount = 10;
         this._loaded = false;
         this.drawResult = null;
     }
+    Object.defineProperty(AppComponent.prototype, "multiplierFactor", {
+        get: function () {
+            return this._multiplierFactor;
+        },
+        set: function (_val) {
+            this._multiplierFactor = _val;
+            this.calculate();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AppComponent.prototype, "pointsAmmount", {
+        get: function () {
+            return this._pointsAmmount;
+        },
+        set: function (_val) {
+            this._pointsAmmount = _val;
+            this.calculate();
+        },
+        enumerable: true,
+        configurable: true
+    });
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent.prototype.calculate = function () {
@@ -172,7 +194,7 @@ module.exports = "<div id=\"svgComponentContainer\">\n\n</div>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#svgComponentContainer {\n  min-height: 350px;\n  max-height: 60vh; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6b2xvdC9Eb2N1bWVudHMvV29yay9HaWdzL1JlZGRpdC9LVFhBQi9hcHAxL3NyYy9hcHAvY29tcG9uZW50cy9zdmctY2hhcnQvc3ZnLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0MsaUJBQWlCO0VBQ2pCLGdCQUFnQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zdmctY2hhcnQvc3ZnLWNoYXJ0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3N2Z0NvbXBvbmVudENvbnRhaW5lcntcblx0bWluLWhlaWdodDogMzUwcHg7XG5cdG1heC1oZWlnaHQ6IDYwdmg7XG59Il19 */"
+module.exports = "#svgComponentContainer {\n  min-height: 350px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2F6b2xvdC9Eb2N1bWVudHMvV29yay9HaWdzL1JlZGRpdC9LVFhBQi9hcHAxL3NyYy9hcHAvY29tcG9uZW50cy9zdmctY2hhcnQvc3ZnLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0MsaUJBQWlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3N2Zy1jaGFydC9zdmctY2hhcnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjc3ZnQ29tcG9uZW50Q29udGFpbmVye1xuXHRtaW4taGVpZ2h0OiAzNTBweDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -241,10 +263,16 @@ var SvgChartComponent = /** @class */ (function () {
         });
         this.drawGraph();
     };
+    /**
+     * @description Calculates the dimensions for the container
+     */
     SvgChartComponent.prototype.calculateDimensions = function () {
-        this._svgContainerDimensionA = jquery__WEBPACK_IMPORTED_MODULE_3__("#" + this._containerId).height();
+        this._svgContainerDimensionA = jquery__WEBPACK_IMPORTED_MODULE_3__("#" + this._containerId).width();
+        if (this._svgContainerDimensionA > jquery__WEBPACK_IMPORTED_MODULE_3__(window).height() * .80) {
+            this._svgContainerDimensionA = jquery__WEBPACK_IMPORTED_MODULE_3__(window).height() * .80;
+        }
         this._circleDiameter = this._svgContainerDimensionA * 0.80;
-        this._correctionFactorPixelsA = this._svgContainerDimensionA * .10;
+        this._correctionFactorPixelsA = this._svgContainerDimensionA * .12;
         this._correctionFactorPixelsB = 2;
     };
     /**
@@ -256,8 +284,8 @@ var SvgChartComponent = /** @class */ (function () {
         }
         this._svgHelper.initialize(this._containerId);
         this.calculateDimensions();
-        this._canonicPoints = this.plotLines();
         this._svgCircle = this.plotCircle();
+        this._canonicPoints = this.plotLines();
         this.plotLabels(this._canonicPoints);
         this._resultEmitter.emit({ points: this._canonicPoints });
     };
@@ -275,36 +303,71 @@ var SvgChartComponent = /** @class */ (function () {
     SvgChartComponent.prototype.plotLabels = function (lines) {
         //element:SVG.Doc, point:JointPoint
         var labelsMade = [];
-        for (var i = 0; i < lines.length; i++) {
-            if (labelsMade.indexOf(lines[i].pointA.label) < 0) {
-                if (i == this._canonicPointsAmmount) {
+        var _loop_1 = function (i) {
+            var foundLabel = lines.find(function (point) {
+                return point.pointA.label === "" + i;
+            });
+            if (foundLabel) {
+                lines[lines.indexOf(foundLabel)].pointA = this_1._svgHelper.drawLabel(this_1._svgDoc, this_1._svgCircle, foundLabel.pointA);
+                //console.log({ label: `${lines[lines.indexOf(foundLabel)].pointA.label}`, i: i, deg: lines[lines.indexOf(foundLabel)].pointA.location.deg });
+            }
+            else {
+                var degree = this_1._svgHelper.getDegreeFromPoint(i, this_1._canonicPointsAmmount);
+                var xy = this_1._svgHelper.calculateSinglePoint(degree, this_1._circleDiameter, this_1._correctionFactorPixelsA);
+                var point = {
+                    label: "" + i,
+                    labelObj: null,
+                    dot: null,
+                    location: {
+                        x: xy.X - 1,
+                        y: xy.Y - 1,
+                        deg: degree
+                    }
+                };
+                point.dot = this_1._svgHelper.drawDot(this_1._svgDoc, point);
+                point = this_1._svgHelper.drawLabel(this_1._svgDoc, this_1._svgCircle, point);
+                labelsMade.push(i);
+            }
+        };
+        var this_1 = this;
+        for (var i = 0; i < this._canonicPointsAmmount; i++) {
+            _loop_1(i);
+        }
+        /*
+        let labelsMade = [];
+        for(let i=0;i<lines.length;i++){
+            if(labelsMade.indexOf(lines[i].pointA.label) < 0){
+                if(i == this._canonicPointsAmmount){
                     continue;
                 }
-                console.log("Plotting: ", lines[i].pointA.label);
+                console.log("Plotting: ",lines[i].pointA.label);
                 lines[i].pointA = this._svgHelper.drawLabel(this._svgDoc, lines[i].pointA);
                 labelsMade.push(lines[i].pointA.label);
             }
         }
+
         //Normalize: 9 // 45
+
         //Normalize Labels
-        labelsMade = labelsMade.map(function (el) {
+        labelsMade = labelsMade.map((el)=>{
             return parseInt(el);
         });
-        if (labelsMade.length < this._canonicPointsAmmount) {
-            for (var i = 1; i < this._canonicPointsAmmount - 1; i++) {
-                if (labelsMade.indexOf(i) < 0) {
-                    var degree = this._svgHelper.getDegreeFromPoint(i, this._canonicPointsAmmount);
-                    var xy = this._svgHelper.calculateSinglePoint(degree, this._circleDiameter, this._correctionFactorPixelsA);
-                    var point = {
-                        label: "" + i,
+
+        if(labelsMade.length < this._canonicPointsAmmount){
+            for(let i=1;i<this._canonicPointsAmmount-1;i++){
+                if(labelsMade.indexOf(i)<0){
+                    let degree = this._svgHelper.getDegreeFromPoint(i, this._canonicPointsAmmount);
+                    let xy = this._svgHelper.calculateSinglePoint(degree, this._circleDiameter, this._correctionFactorPixelsA);
+                    let point:JointPoint = {
+                        label: `${i}`,
                         labelObj: null,
                         dot: null,
                         location: {
-                            x: xy.X - 1,
-                            y: xy.Y - 1,
+                            x: xy.X-1,
+                            y: xy.Y-1,
                             deg: degree
                         }
-                    };
+                    }
                     point.dot = this._svgHelper.drawDot(this._svgDoc, point);
                     point = this._svgHelper.drawLabel(this._svgDoc, point);
                     labelsMade.push(i);
@@ -313,6 +376,7 @@ var SvgChartComponent = /** @class */ (function () {
             }
         }
         console.log(labelsMade);
+        */
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])("generateEmitter"),
@@ -521,17 +585,23 @@ var SvgHelper = /** @class */ (function () {
         to be plotted agains the SVG object as canonical points
     */
     SvgHelper.prototype.getStartingPointCoords = function (pointsAmmount, diameter, correctionPixelsA) {
-        var degreeJump = (360 / pointsAmmount);
         var builtPoints = [];
-        var order = 0;
-        for (var deg = 360; deg > 0; deg -= degreeJump) {
+        for (var i = pointsAmmount; i > 0; i--) {
+            var deg = this.getDegreeFromPoint(i, pointsAmmount);
             var point = this.calculateSinglePoint(deg, diameter, correctionPixelsA);
+            if (i == 40 || i == 5) {
+                if (i == 5 && deg == 40) {
+                    //point.Y = 100;
+                }
+                console.log("I: ", i);
+                console.log("Deg: ", deg);
+                console.log("X, Y: ", { point: point });
+            }
             builtPoints.push({
                 x: point.X,
                 y: point.Y,
                 deg: deg
             });
-            order++;
         }
         return builtPoints;
     };
@@ -554,15 +624,30 @@ var SvgHelper = /** @class */ (function () {
      */
     SvgHelper.prototype.calculateSinglePoint = function (deg, diameter, correctionPixelsA) {
         var offsetLocation = (diameter / 2);
-        var X = offsetLocation + ((diameter / 2) * Math.cos(this.degToRad(deg))) * -1;
+        var X = Math.round(((diameter / 2) * Math.cos(this.degToRad(deg))) * -1);
+        X += offsetLocation;
         X += correctionPixelsA;
-        var Y = (offsetLocation + ((diameter / 2) * Math.sin(this.degToRad(deg))));
+        var Y = Math.round((diameter / 2) * Math.sin(this.degToRad(deg)));
+        Y += offsetLocation;
         Y += correctionPixelsA;
         if (deg == 40) {
-            console.log({
-                X: X, Y: Y
-            });
+            console.log("Edge case(?): " + deg);
+            //Y-= offsetLocation+correctionPixelsA+8;
         }
+        return {
+            X: X, Y: Y
+        };
+    };
+    /**
+     * @description Gets coordiantes X, Y point from center
+     * @param distance Distance from center
+     */
+    SvgHelper.prototype.plotPointFromCenter = function (deg, diameter, distance, cy, cx) {
+        diameter += distance;
+        var X = Math.round(((diameter / 2) * Math.cos(this.degToRad(deg))) * -1);
+        X += cx;
+        var Y = Math.round((diameter / 2) * Math.sin(this.degToRad(deg)));
+        Y += cy;
         return {
             X: X, Y: Y
         };
@@ -578,16 +663,19 @@ var SvgHelper = /** @class */ (function () {
         //console.log({ pointsAmmount, multFactor, diameter, correctionPixelsA });
         var plotResult = [];
         var startPoints = this.getStartingPointCoords(pointsAmmount, diameter, correctionPixelsA);
-        //console.log({startPoints});
         for (var i = 0; i < startPoints.length; i++) {
-            var spinFactor = 1; //How many spins it gives
-            var plotPointNumber = Math.floor((multFactor * i)); //TODO Work with decimals
+            var spinFactor = 1; //How many spins it gave
+            var plotPointNumber = Math.floor((multFactor * i)); //Number to plot, rounding to closest decimal
             if (plotPointNumber > pointsAmmount) {
-                spinFactor = Math.floor(plotPointNumber / pointsAmmount);
-                plotPointNumber -= (spinFactor * pointsAmmount);
+                spinFactor = Math.floor(plotPointNumber / pointsAmmount); //Spins given
+                plotPointNumber -= (spinFactor * pointsAmmount); //The point to plot against the graph
             }
             else if (plotPointNumber == pointsAmmount) {
+                //The same as 0
                 continue;
+            }
+            if (i == 40) {
+                console.log();
             }
             var pointA = {
                 label: "" + i,
@@ -595,10 +683,12 @@ var SvgHelper = /** @class */ (function () {
                 dot: null,
                 location: startPoints[i]
             };
-            var pointB_coords = this.calculateSinglePoint(startPoints[plotPointNumber].deg, diameter, correctionPixelsA);
-            var labelB = parseInt((startPoints[plotPointNumber].deg / (360 / pointsAmmount)).toFixed(2));
+            var pointB_coords = this
+                .calculateSinglePoint(startPoints[plotPointNumber].deg, diameter, correctionPixelsA);
+            //let labelB = parseInt((startPoints[plotPointNumber].deg/(360/pointsAmmount)).toFixed(2));
+            //let labelB = this.getDegreeFromPoint(startPoints[plotPointNumber].deg, startPoints.length);
             var pointB = {
-                label: "" + labelB,
+                label: "",
                 dot: null,
                 location: {
                     x: pointB_coords.X,
@@ -666,11 +756,13 @@ var SvgHelper = /** @class */ (function () {
      * @param element Element to draw the label into
      * @param point The point to get the coordinates
      */
-    SvgHelper.prototype.drawLabel = function (element, point) {
+    SvgHelper.prototype.drawLabel = function (element, circle, point) {
         point.labelObj = element.text("" + point.label)
             .fill('black')
             .font({ 'weight': 'bold' })
             .move(point.location.x + 5, point.location.y);
+        var pointFromC = this.plotPointFromCenter(point.location.deg, circle.width(), 20, circle.cx(), circle.cy());
+        point.labelObj.center(pointFromC.X, pointFromC.Y);
         return point;
     };
     SvgHelper._instace = new SvgHelper();
